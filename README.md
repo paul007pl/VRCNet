@@ -5,7 +5,7 @@
 
 This repository contains the PyTorch implementation of the paper:
 
-*Variational Relational Point Completion Network, CVPR 2021 **(Oral)***
+**Variational Relational Point Completion Network, CVPR 2021 (Oral)**
 
 [[arxiv](https://paul007pl.github.io/projects/VRCNet)|[video](https://www.youtube.com/watch?v=0SNHlxvCP0g)|[webpage](https://paul007pl.github.io/projects/VRCNet)]
 
@@ -30,7 +30,7 @@ Moreover, this repository introduces an integrated Point Cloud Completion Benchm
 + PyTorch 1.2.0
 + PyYAML 5.3.1
 
-2. Download corresponding dataset (e.g. ShapeNet dataset, TopNet dataset or Cascade dataset)
+2. Download corresponding dataset (e.g. [MVP dataset](https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AACjoTzt-_vlX6OF9mfSpFMra?dl=0&lst=))
 3. Compile PyTorch 3rd-party modules ([ChamferDistancePytorch](https://github.com/ThibaultGROUEIX/ChamferDistancePytorch), [emd, expansion_penalty, MDS](https://github.com/Colin97/MSN-Point-Cloud-Completion), [Pointnet2.PyTorch](https://github.com/sshaoshuai/Pointnet2.PyTorch))
 
 
