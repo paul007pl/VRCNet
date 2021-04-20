@@ -1,0 +1,10 @@
+wget https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AADGsHD9wl0Quhha1CIY7bwYa/mvp_test_gt_2048pts.h5?dl=0
+wget https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AAA4Sk639UtPoQAqL1E1bJUTa/mvp_test_gt_4096pts.h5?dl=0
+wget https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AACE4zFbMo6G3s7KXhcKCJ_Xa/mvp_test_gt_8192pts.h5?dl=0
+wget https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AADPYYiE1gx18zibaIoUJwVfa/mvp_test_gt_16384pts.h5?dl=0
+wget https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AACuytSzxru8rgypU6WvBd8Oa/mvp_test_input.h5?dl=0
+wget https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AAAKS_UaCr-EUDP0MHwVufcOa/mvp_train_gt_2048pts.h5?dl=0
+wget https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AACGhpswgh_J_peZT5SG66Uda/mvp_train_gt_4096pts.h5?dl=0
+wget https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AAAYEeg9bNZN3UVksIqlmTC4a/mvp_train_gt_8192pts.h5?dl=0
+wget https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AAB4LRFrExkYpXzsm7xIjOcma/mvp_train_gt_16384pts.h5?dl=0
+wget https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AABJsqLDf-bmlF_vv3kV--Jya/mvp_train_input.h5?dl=0
