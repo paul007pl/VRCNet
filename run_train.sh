@@ -1,6 +1,6 @@
 #!/bin/bash
 
-partition=vi_irdc_v100_32g
+partition=innova
 job_name=benchmark
 gpus=$2
 g=$((${gpus}<8?${gpus}:8))
