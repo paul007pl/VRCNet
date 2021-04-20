@@ -46,7 +46,7 @@ Please download our [MVP Dataset](https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AAC
 
 
 ## Citation
-If you find our code or paper useful, please cite our paper:
+If you find our code useful, please cite our paper:
 <!-- ```bibtex
 @article{
 }
@@ -69,5 +69,5 @@ We include the following algorithms:
 [3] [Topnet](https://github.com/lynetcha/completion3d)  
 [4] [Cascade](https://github.com/xiaogangw/cascaded-point-completion)  
 [5] [ECG](https://github.com/paul007pl/ECG)  
-[6] VRCNet
+[6] [VRCNet](https://github.com/paul007pl/VRCNet)
 
