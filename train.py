@@ -11,7 +11,7 @@ import yaml
 import os
 import sys
 import argparse
-from data.dataset import ShapeNetH5
+from dataset import ShapeNetH5
 
 
 def train():
@@ -21,8 +21,8 @@ def train():
     train_loss_meter = AverageValueMeter()
     val_loss_meters = {m: AverageValueMeter() for m in metrics}
 
-    dataset = ShapeNetH5(train=True, npoints=args.num_points, use_mean_feature=args.use_mean_feature)
-    dataset_test = ShapeNetH5(train=False, npoints=args.num_points, use_mean_feature=args.use_mean_feature)
+    dataset = ShapeNetH5(train=True, npoints=args.num_points)
+    dataset_test = ShapeNetH5(train=False, npoints=args.num_points)
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=args.batch_size,
                                              shuffle=True, num_workers=int(args.workers))
     dataloader_test = torch.utils.data.DataLoader(dataset_test, batch_size=args.batch_size,
@@ -117,17 +117,14 @@ def train():
             if cascade_gan:
                 optimizer_d.zero_grad()
 
-            if not args.use_mean_feature:
-                _, inputs, gt = data
-                mean_feature = None
-            else:
-                _, inputs, gt, mean_feature = data
-                mean_feature = mean_feature.float().cuda()
+            _, inputs, gt = data
+            # mean_feature = None
 
             inputs = inputs.float().cuda()
             gt = gt.float().cuda()
             inputs = inputs.transpose(2, 1).contiguous()
-            out2, loss2, net_loss = net(inputs, gt, mean_feature=mean_feature, alpha=alpha)
+            # out2, loss2, net_loss = net(inputs, gt, mean_feature=mean_feature, alpha=alpha)
+            out2, loss2, net_loss = net(inputs, gt, alpha=alpha)
 
             if cascade_gan:
                 d_fake = generator_step(net_d, out2, net_loss, optimizer)
@@ -157,17 +154,14 @@ def val(net, curr_epoch_num, val_loss_meters, dataloader_test, best_epoch_losses
 
     with torch.no_grad():
         for i, data in enumerate(dataloader_test):
-            if not args.use_mean_feature:
-                label, inputs, gt = data
-                mean_feature = None
-            else:
-                label, inputs, gt, mean_feature = data
-                mean_feature = mean_feature.float().cuda()
+            label, inputs, gt = data
+            # mean_feature = None
 
             inputs = inputs.float().cuda()
             gt = gt.float().cuda()
             inputs = inputs.transpose(2, 1).contiguous()
-            result_dict = net(inputs, gt, is_training=False, mean_feature=mean_feature)
+            # result_dict = net(inputs, gt, is_training=False, mean_feature=mean_feature)
+            result_dict = net(inputs, gt, is_training=False)
             for k, v in val_loss_meters.items():
                 v.update(result_dict[k].mean().item())
 

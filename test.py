@@ -7,11 +7,11 @@ import munch
 import yaml
 from utils.vis_utils import plot_single_pcd
 from utils.train_utils import *
-from data.dataset import ShapeNetH5
+from dataset import ShapeNetH5
 
 
 def test():
-    dataset_test = ShapeNetH5(train=False, npoints=args.num_points, use_mean_feature=args.use_mean_feature)
+    dataset_test = ShapeNetH5(train=False, npoints=args.num_points)
     dataloader_test = torch.utils.data.DataLoader(dataset_test, batch_size=args.batch_size,
                                                   shuffle=False, num_workers=int(args.workers))
     dataset_length = len(dataset_test)
@@ -42,17 +42,15 @@ def test():
         os.makedirs(save_completion_path, exist_ok=True)
     with torch.no_grad():
         for i, data in enumerate(dataloader_test):
-            if not args.use_mean_feature:
-                label, inputs_cpu, gt_cpu = data
-                mean_feature = None
-            else:
-                label, inputs_cpu, gt_cpu, mean_feature = data
-                mean_feature = mean_feature.float().cuda()
+            
+            label, inputs_cpu, gt_cpu = data
+            # mean_feature = None
 
             inputs = inputs_cpu.float().cuda()
             gt = gt_cpu.float().cuda()
             inputs = inputs.transpose(2, 1).contiguous()
-            result_dict = net(inputs, gt, is_training=False, mean_feature=mean_feature)
+            # result_dict = net(inputs, gt, is_training=False, mean_feature=mean_feature)
+            result_dict = net(inputs, gt, is_training=False)
             for k, v in test_loss_meters.items():
                 v.update(result_dict[k].mean().item())
 
