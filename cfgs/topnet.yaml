@@ -1,0 +1,30 @@
+batch_size: 32
+workers: 0
+nepoch: 300
+model_name: topnet
+load_model: null
+start_epoch: 0
+num_points: 2048
+work_dir: log/
+flag: debug
+loss: cd
+manual_seed: null
+use_mean_feature: False
+step_interval_to_print: 500
+epoch_interval_to_save: 1
+epoch_interval_to_val: 1
+varying_constant: 0.01, 0.1, 0.5, 1
+varying_constant_epochs: 5, 15, 30
+
+lr: 0.5e-2
+lr_decay: True
+lr_decay_interval: 40
+lr_decay_rate: 0.7
+lr_step_decay_epochs: null
+lr_step_decay_rates: null
+lr_clip: 1.e-6
+optimizer: Adagrad
+initial_accum_val: 1.e-13
+
+# test
+save_vis: True
