@@ -7,7 +7,7 @@ This repository contains the PyTorch implementation of the paper:
 
 **Variational Relational Point Completion Network, CVPR 2021 (Oral)**
 
-[[arxiv](https://paul007pl.github.io/projects/VRCNet)|[video](https://www.youtube.com/watch?v=0SNHlxvCP0g)|[webpage](https://paul007pl.github.io/projects/VRCNet)]
+[[arxiv](https://arxiv.org/abs/2104.10154)|[video](https://www.youtube.com/watch?v=0SNHlxvCP0g)|[webpage](https://paul007pl.github.io/projects/VRCNet)]
 
 In CVPR 2021
 
@@ -47,10 +47,14 @@ Please download our [MVP Dataset](https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AAC
 
 ## Citation
 If you find our code useful, please cite our paper:
-<!-- ```bibtex
-@article{
+```bibtex
+@article{pan2021vrcnet,
+  title={Variational Relational Point Completion Network},
+  author={Pan, Liang and Chen, Xinyi and Cai, Zhongang and Zhang, Junzhe and Zhao, Haiyu and Yi, Shuai and Liu, Ziwei},
+  journal={arXiv preprint arXiv:2104.10154},
+  year={2021}
 }
-``` -->
+```
 
 
 ## License
