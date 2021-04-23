@@ -9,11 +9,17 @@ This repository contains the PyTorch implementation of the paper:
 
 [[arxiv](https://arxiv.org/abs/2104.10154)|[video](https://www.youtube.com/watch?v=0SNHlxvCP0g)|[webpage](https://paul007pl.github.io/projects/VRCNet)]
 
+
 In CVPR 2021
 
 > Real-scanned point clouds are often incomplete due to viewpoint, occlusion, and noise. Existing point cloud completion methods tend to generate global shape skeletons and hence lack fine local details. Furthermore, they mostly learn a deterministic partial-to-complete mapping, but overlook structural relations in man-made objects. To tackle these challenges, this paper proposes a variational framework, **V**ariational **R**elational point **C**ompletion network (VRCNet) with two appealing properties: **1) Probabilistic Modeling.** In particular, we propose a dual-path architecture to enable principled probabilistic modeling across partial and complete clouds. One path consumes complete point clouds for reconstruction by learning a point VAE. The other path generates complete shapes for partial point clouds, whose embedded distribution is guided by distribution obtained from the reconstruction path during training. **2) Relational Enhancement.** Specifically, we carefully design point selfattention kernel and point selective kernel module to exploit relational point features, which refines local shape details conditioned on the coarse completion. In addition, we contribute **a multi-view partial point cloud dataset (MVP dataset)** containing over 100,000 high-quality scans, which renders partial 3D shapes from 26 uniformly distributed camera poses for each 3D CAD model. Extensive experiments demonstrate that VRCNet outperforms state-of-theart methods on all standard point cloud completion benchmarks. Notably, VRCNet shows great generalizability and robustness on real-world point cloud scans.
+
 <p align="center"> 
-<img src="images/mvp.png">
+<img src="images/overview.png">
+</p>
+
+<p align="center"> 
+<img src="images/modules.png">
 </p>
 
 
@@ -31,11 +37,15 @@ Moreover, this repository introduces an integrated Point Cloud Completion Benchm
 + PyYAML 5.3.1
 
 2. Download corresponding dataset (e.g. [MVP dataset](https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AACjoTzt-_vlX6OF9mfSpFMra?dl=0&lst=))
+
 3. Compile PyTorch 3rd-party modules ([ChamferDistancePytorch](https://github.com/ThibaultGROUEIX/ChamferDistancePytorch), [emd, expansion_penalty, MDS](https://github.com/Colin97/MSN-Point-Cloud-Completion), [Pointnet2.PyTorch](https://github.com/sshaoshuai/Pointnet2.PyTorch))
 
 
 ### MVP Dataset
 Please download our [MVP Dataset](https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AACjoTzt-_vlX6OF9mfSpFMra?dl=0&lst=) to the folder `data`.
+<p align="center"> 
+<img src="images/mvp.png">
+</p>
 
 
 ### Usage
