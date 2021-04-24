@@ -62,7 +62,7 @@ Please download our [MVP Dataset](https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AAC
 ## Citation
 If you find our code useful, please cite our paper:
 ```bibtex
-@article{pan2021vrcnet,
+@article{pan2021variational,
   title={Variational Relational Point Completion Network},
   author={Pan, Liang and Chen, Xinyi and Cai, Zhongang and Zhang, Junzhe and Zhao, Haiyu and Yi, Shuai and Liu, Ziwei},
   journal={arXiv preprint arXiv:2104.10154},
