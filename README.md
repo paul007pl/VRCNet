@@ -46,7 +46,7 @@ Moreover, this repository introduces an integrated Point Cloud Completion Benchm
 
 
 ### MVP Dataset
-Please download our [MVP Dataset](https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AACjoTzt-_vlX6OF9mfSpFMra?dl=0&lst=) to the folder `data`.
+Please download our MVP Dataset ([Dropbox](https://www.dropbox.com/sh/la0kwlqx4n2s5e3/AACjoTzt-_vlX6OF9mfSpFMra?dl=0&lst=) or [Google Drive](https://drive.google.com/drive/folders/1ylC-dYFM45KW4K9tPyljBSVyetazCEeH?usp=sharing)) to the folder `data`.
 <p align="center"> 
 <img src="images/mvp.png">
 </p>
