@@ -28,8 +28,8 @@ def test():
     metrics = ['cd_p', 'cd_t', 'emd', 'f1']
     test_loss_meters = {m: AverageValueMeter() for m in metrics}
     test_loss_cat = torch.zeros([16, 4], dtype=torch.float32).cuda()
-    cat_num = torch.ones([8, 1], dtype=torch.float32).cuda() * 150
-    novel_cat_num = torch.ones([8, 1], dtype=torch.float32).cuda() * 50
+    cat_num = torch.ones([8, 1], dtype=torch.float32).cuda() * 150 * 26
+    novel_cat_num = torch.ones([8, 1], dtype=torch.float32).cuda() * 50 * 26
     cat_num = torch.cat((cat_num, novel_cat_num), dim=0)
     cat_name = ['airplane', 'cabinet', 'car', 'chair', 'lamp', 'sofa', 'table', 'watercraft', 
                 'bed', 'bench', 'bookshelf', 'bus', 'guitar', 'motorbike', 'pistol', 'skateboard']
@@ -59,7 +59,7 @@ def test():
 
             for j, l in enumerate(label):
                 for ind, m in enumerate(metrics):
-                    test_loss_cat[int(l), ind] = result_dict[m][int(j)]
+                    test_loss_cat[int(l), ind] += result_dict[m][int(j)]
 
             if i % args.step_interval_to_print == 0:
                 logging.info('test [%d/%d]' % (i, dataset_length / args.batch_size))
