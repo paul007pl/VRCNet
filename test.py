@@ -79,7 +79,7 @@ def test():
             category_log += '\ncategory name: %s' % (cat_name[i])
             for ind, m in enumerate(metrics):
                 scale_factor = 1 if m == 'f1' else 10000
-                category_log += ' %s: %f' % (m, test_loss_cat[i, 0] / cat_num[i] * scale_factor)
+                category_log += ' %s: %f' % (m, test_loss_cat[i, ind] / cat_num[i] * scale_factor)
         logging.info(category_log)
 
         logging.info('Overview results:')
