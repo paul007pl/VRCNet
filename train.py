@@ -131,7 +131,7 @@ def train():
                 discriminator_step(net_d, gt, d_fake, optimizer_d)
             else:
                 train_loss_meter.update(net_loss.mean().item())
-                net_loss.backward(torch.ones(torch.cuda.device_count()).cuda())
+                net_loss.backward(torch.squeeze(torch.ones(torch.cuda.device_count())).cuda())
                 optimizer.step()
 
             if i % args.step_interval_to_print == 0:

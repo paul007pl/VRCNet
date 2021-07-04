@@ -27,10 +27,13 @@ def test():
 
     metrics = ['cd_p', 'cd_t', 'emd', 'f1']
     test_loss_meters = {m: AverageValueMeter() for m in metrics}
-    test_loss_cat = torch.zeros([8, 4], dtype=torch.float32).cuda()
+    test_loss_cat = torch.zeros([16, 4], dtype=torch.float32).cuda()
     cat_num = torch.ones([8, 1], dtype=torch.float32).cuda() * 150
-    cat_name = ['airplane', 'cabinet', 'car', 'chair', 'lamp', 'sofa', 'table', 'vessel']
-    idx_to_plot = [i for i in range(0, 1200, 75)]
+    novel_cat_num = torch.ones([8, 1], dtype=torch.float32).cuda() * 50
+    cat_num = torch.cat((cat_num, novel_cat_num), dim=0)
+    cat_name = ['airplane', 'cabinet', 'car', 'chair', 'lamp', 'sofa', 'table', 'watercraft', 
+                'bed', 'bench', 'bookshelf', 'bus', 'guitar', 'motorbike', 'pistol', 'skateboard']
+    idx_to_plot = [i for i in range(0, 1600, 75)]
 
     logging.info('Testing...')
     if args.save_vis:
@@ -72,11 +75,11 @@ def test():
 
         logging.info('Loss per category:')
         category_log = ''
-        for i in range(8):
-            category_log += 'category name: %s' % (cat_name[i])
+        for i in range(16):
+            category_log += '\ncategory name: %s' % (cat_name[i])
             for ind, m in enumerate(metrics):
                 scale_factor = 1 if m == 'f1' else 10000
-                category_log += '%s: %f' % (m, test_loss_cat[i, 0] / cat_num[i] * scale_factor)
+                category_log += ' %s: %f' % (m, test_loss_cat[i, 0] / cat_num[i] * scale_factor)
         logging.info(category_log)
 
         logging.info('Overview results:')
