@@ -3,6 +3,13 @@
 <img src="images/intro.png">
 </p>
 
+
+## [NEWS]
+- **2021-07-10 [NEW:tada:]** [Database website](https://mvp-dataset.github.io) and [Challenge website](https://competitions.codalab.org/competitions/33430) are online!
+- **2021-07-09 [NEW:tada:]** [Toolbox](https://github.com/paul007pl/MVP_Benchmark) are released!
+- **2021-07-01** The MVP challenges will be hosted in the **ICCV2021 Workshop**: ***[Sensing, Understanding and Synthesizing Humans](https://sense-human.github.io/)***.
+
+
 This repository contains the PyTorch implementation of the paper:
 
 **Variational Relational Point Completion Network, CVPR 2021 (Oral)**
@@ -27,7 +34,7 @@ Our proposed point cloud learning modules:
 </p>
 
 
-### Point Cloud Completion Benchmark
+## [Point Cloud Completion Benchmark]
 Moreover, this repository introduces an integrated Point Cloud Completion Benchmark implemented in Python 3.5, PyTorch 1.2 and CUDA 10.0. Supported algorithms: PCN, Topnet, MSN, Cascade, ECG and our VRCNet.
 
 
@@ -59,7 +66,7 @@ Please download our MVP Dataset ([Dropbox](https://www.dropbox.com/sh/la0kwlqx4n
 + `run_train.sh` and `run_test.sh` are provided for SLURM users. 
 
 
-## Citation
+## [Citation]
 If you find our code useful, please cite our paper:
 ```bibtex
 @article{pan2021variational,
@@ -71,11 +78,11 @@ If you find our code useful, please cite our paper:
 ```
 
 
-## License
+## [License]
 Our code is released under MIT License.
 
 
-## Acknowledgement
+## [Acknowledgement]
 We include the following PyTorch 3rd-party libraries:  
 [1] [ChamferDistancePytorch](https://github.com/ThibaultGROUEIX/ChamferDistancePytorch)  
 [2] [emd, expansion_penalty, MDS](https://github.com/Colin97/MSN-Point-Cloud-Completion)  
