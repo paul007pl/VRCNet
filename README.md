@@ -5,8 +5,8 @@
 
 
 ## [NEWS]
-- **2021-07-10 [NEW:tada:]** [Database website](https://mvp-dataset.github.io) and [Challenge website](https://competitions.codalab.org/competitions/33430) are online!
-- **2021-07-09 [NEW:tada:]** [Toolbox](https://github.com/paul007pl/MVP_Benchmark) are released!
+- **2021-07-10 [NEW:tada:]** [Database Website](https://mvp-dataset.github.io) and [Challenge Website](https://competitions.codalab.org/competitions/33430) are online!
+- **2021-07-09 [NEW:tada:]** [MVP Benchmark Codebase](https://github.com/paul007pl/MVP_Benchmark) are released!
 - **2021-07-01** The MVP challenges will be hosted in the **ICCV2021 Workshop**: ***[Sensing, Understanding and Synthesizing Humans](https://sense-human.github.io/)***.
 
 
