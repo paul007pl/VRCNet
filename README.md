@@ -10,6 +10,7 @@
 - **2021-07-01** The MVP challenges will be hosted in the **ICCV2021 Workshop**: ***[Sensing, Understanding and Synthesizing Humans](https://sense-human.github.io/)***.
 
 
+## [VRCNet]
 This repository contains the PyTorch implementation of the paper:
 
 **Variational Relational Point Completion Network, CVPR 2021 (Oral)**
@@ -34,13 +35,12 @@ Our proposed point cloud learning modules:
 </p>
 
 
-## [Point Cloud Completion Benchmark]
-Moreover, this repository introduces an integrated Point Cloud Completion Benchmark implemented in Python 3.5, PyTorch 1.2 and CUDA 10.0. Supported algorithms: PCN, Topnet, MSN, Cascade, ECG and our VRCNet.
+### Installation
+Moreover, this repository introduces an integrated Point Cloud Completion Benchmark implemented in Python 3.5, PyTorch 1.2 and CUDA 10.0. 
+Supported algorithms: PCN, Topnet, MSN, Cascade, ECG and our VRCNet.
 
 **You can also try the new [implementation](https://github.com/paul007pl/MVP_Benchmark), which supports Python 3.7, Pytorch 1.5.0 and CUDA 10.1**
 
-
-### Installation
 1. Install dependencies:
 + h5py 2.10.0
 + matplotlib 3.0.3
