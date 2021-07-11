@@ -37,6 +37,8 @@ Our proposed point cloud learning modules:
 ## [Point Cloud Completion Benchmark]
 Moreover, this repository introduces an integrated Point Cloud Completion Benchmark implemented in Python 3.5, PyTorch 1.2 and CUDA 10.0. Supported algorithms: PCN, Topnet, MSN, Cascade, ECG and our VRCNet.
 
+**You can also try the new [implementation](https://github.com/paul007pl/MVP_Benchmark), which supports Python 3.7, Pytorch 1.5.0 and CUDA 10.1**
+
 
 ### Installation
 1. Install dependencies:
