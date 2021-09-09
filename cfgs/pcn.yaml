@@ -2,7 +2,7 @@ batch_size: 32
 workers: 0
 nepoch: 100
 model_name: pcn
-load_model: log/pcn_cd_debug_2020-12-15T17:22:18/best_emd_network.pth
+load_model: null
 start_epoch: 0
 num_points: 2048
 work_dir: log/

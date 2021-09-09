@@ -23,10 +23,8 @@ def train():
 
     dataset = ShapeNetH5(train=True, npoints=args.num_points)
     dataset_test = ShapeNetH5(train=False, npoints=args.num_points)
-    dataloader = torch.utils.data.DataLoader(dataset, batch_size=args.batch_size,
-                                             shuffle=True, num_workers=int(args.workers))
-    dataloader_test = torch.utils.data.DataLoader(dataset_test, batch_size=args.batch_size,
-                                                  shuffle=False, num_workers=int(args.workers))
+    dataloader = torch.utils.data.DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=int(args.workers))
+    dataloader_test = torch.utils.data.DataLoader(dataset_test, batch_size=args.batch_size, shuffle=False, num_workers=int(args.workers))
     logging.info('Length of train dataset:%d', len(dataset))
     logging.info('Length of test dataset:%d', len(dataset_test))
 
@@ -54,6 +52,7 @@ def train():
     lr = args.lr
     if cascade_gan:
         lr_d = lr / 2
+
     if args.lr_decay:
         if args.lr_decay_interval and args.lr_step_decay_epochs:
             raise ValueError('lr_decay_interval and lr_step_decay_epochs are mutually exclusive!')

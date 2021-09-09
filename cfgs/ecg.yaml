@@ -2,7 +2,7 @@ batch_size: 32
 workers: 0
 nepoch: 100
 model_name: ecg
-load_model: log/ecg_cd_debug_2020-12-16T12:31:13/network.pth
+load_model: null
 start_epoch: 28
 num_points: 2048
 work_dir: log/

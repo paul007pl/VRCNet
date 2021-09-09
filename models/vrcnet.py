@@ -22,11 +22,9 @@ class SA_module(nn.Module):
         self.conv3 = nn.Conv2d(in_planes, mid_planes, kernel_size=1)
 
         self.conv_w = nn.Sequential(nn.ReLU(inplace=False),
-                                    nn.Conv2d(rel_planes * (k + 1), mid_planes // share_planes, kernel_size=1,
-                                              bias=False),
+                                    nn.Conv2d(rel_planes * (k + 1), mid_planes // share_planes, kernel_size=1, bias=False),
                                     nn.ReLU(inplace=False),
-                                    nn.Conv2d(mid_planes // share_planes, k * mid_planes // share_planes,
-                                              kernel_size=1))
+                                    nn.Conv2d(mid_planes // share_planes, k * mid_planes // share_planes, kernel_size=1))
         self.activation_fn = nn.ReLU(inplace=False)
 
         self.conv_out = nn.Conv2d(mid_planes, out_planes, kernel_size=1)

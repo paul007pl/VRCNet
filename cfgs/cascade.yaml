@@ -2,7 +2,7 @@ batch_size: 32
 workers: 0
 nepoch: 100
 model_name: cascade
-load_model: log/cascade_cd_debug_2020-12-15T17:22:46/network.pth
+load_model: null
 start_epoch: 61
 num_points: 2048
 work_dir: log/

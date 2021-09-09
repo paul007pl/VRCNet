@@ -12,8 +12,7 @@ from dataset import ShapeNetH5
 
 def test():
     dataset_test = ShapeNetH5(train=False, npoints=args.num_points)
-    dataloader_test = torch.utils.data.DataLoader(dataset_test, batch_size=args.batch_size,
-                                                  shuffle=False, num_workers=int(args.workers))
+    dataloader_test = torch.utils.data.DataLoader(dataset_test, batch_size=args.batch_size, shuffle=False, num_workers=int(args.workers))
     dataset_length = len(dataset_test)
     logging.info('Length of test dataset:%d', len(dataset_test))
 
