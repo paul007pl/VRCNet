@@ -5,10 +5,12 @@
 
 
 ## [NEWS]
-- **2021-07-12 [NEW:tada:]** The submission on [Codalab](https://competitions.codalab.org/competitions/33430) starts!
-- **2021-07-10 [NEW:tada:]** [Database Website](https://mvp-dataset.github.io) and [Challenge Website](https://competitions.codalab.org/competitions/33430) are online!
-- **2021-07-09 [NEW:tada:]** [MVP Benchmark Codebase](https://github.com/paul007pl/MVP_Benchmark) are released!
-- **2021-07-01** The MVP challenges will be hosted in the **ICCV2021 Workshop**: ***[Sensing, Understanding and Synthesizing Humans](https://sense-human.github.io/)***.
+- **2021-12-22 [NEW:tada:]** The workshop report is avaliable at [Arxiv](https://arxiv.org/pdf/2112.12053.pdf)!
+- **2021-10-17 [NEW:tada:]** Awards at ICCV2021 Workshop. Congradulations to all the winner teams!
+- **2021-07-12** The submission on [Codalab](https://competitions.codalab.org/competitions/33430) starts!
+- **2021-07-10** [Database Website](https://mvp-dataset.github.io) and [Challenge Website](https://competitions.codalab.org/competitions/33430) are online!
+- **2021-07-09** [MVP Benchmark Codebase](https://github.com/paul007pl/MVP_Benchmark) are released!
+- **2021** The MVP challenges will be hosted in the **ICCV2021 Workshop**: ***[Sensing, Understanding and Synthesizing Humans](https://sense-human.github.io/)***.
 
 
 ## [VRCNet]
@@ -38,6 +40,7 @@ Our proposed point cloud learning modules:
 
 ### Installation
 Moreover, this repository introduces an integrated Point Cloud Completion Benchmark implemented in Python 3.5, PyTorch 1.2 and CUDA 10.0. 
+If you want to use PyTorch with a more recent version, please check our [Codebase](https://github.com/paul007pl/MVP_Benchmark).
 Supported algorithms: PCN, Topnet, MSN, Cascade, ECG and our VRCNet.
 
 **You can also try the new [implementation](https://github.com/paul007pl/MVP_Benchmark), which supports Python 3.7, Pytorch 1.5.0 and CUDA 10.1**
