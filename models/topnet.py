@@ -33,19 +33,17 @@ class MLP(nn.Module):
     def __init__(self, dims,  bn=None):
         super().__init__()
         self.model = nn.Sequential()
+        self.bn = bn
         for i, num_channels in enumerate(dims[:-2]):
             self.model.add_module('fc_%d' % (i+1), nn.Linear(num_channels, dims[i+1]))
-        self.bn = bn
-        if self.bn:
-            self.batch_norm = nn.BatchNorm1d(dims[-2])
+            if self.bn:
+                self.model.add_module('bn_%d' % (i+1), nn.BatchNorm1d(dims[i+1]))
+            self.model.add_module('relu_%d' % (i+1), nn.ReLU())
 
         self.output_layer = nn.Linear(dims[-2], dims[-1])
 
     def forward(self, features):
         features = self.model(features)
-        if self.bn:
-            features = self.batch_norm(features)
-        features = F.relu(features)
         outputs = self.output_layer(features)
         return outputs
 
@@ -54,20 +52,17 @@ class MLPConv(nn.Module):
     def __init__(self, dims, bn=None):
         super().__init__()
         self.model = nn.Sequential()
+        self.bn = bn
         for i, num_channels in enumerate(dims[:-2]):
             self.model.add_module('conv1d_%d' % (i+1), nn.Conv1d(num_channels, dims[i+1], kernel_size=1))
-        self.bn = bn
-        if self.bn:
-            self.batch_norm = nn.BatchNorm1d(dims[-2])
+            if self.bn:
+                self.model.add_module('bn_%d' % (i+1), nn.BatchNorm1d(dims[i+1]))
+			self.model.add_module('relu_%d' % (i+1), torch.nn.ReLU())
 
         self.output_layer = nn.Conv1d(dims[-2], dims[-1], kernel_size=1)
 
     def forward(self, inputs):
         inputs = self.model(inputs)
-        if self.bn:
-            self.batch_norm.cuda()
-            inputs = self.batch_norm(inputs)
-        inputs = F.relu(inputs)
         outputs = self.output_layer(inputs)
         return outputs
 
